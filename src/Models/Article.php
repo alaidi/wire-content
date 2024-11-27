@@ -5,8 +5,8 @@ namespace App\Models;
 use Awcodes\Curator\Models\Media;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Str;
 
 class Article extends Model
 {
@@ -19,11 +19,13 @@ class Article extends Model
         'media_id',
         'status',
         'views_count',
-        'user_id'
+        'user_id',
     ];
+
     protected $casts = [
         'views_count' => 'integer',
     ];
+
     public function setTitleAttribute($value)
     {
         $this->attributes['title'] = $value;
@@ -34,6 +36,7 @@ class Article extends Model
     {
         return $this->belongsTo(User::class);
     }
+
     public function media(): BelongsTo
     {
         return $this->belongsTo(Media::class);

@@ -2,9 +2,9 @@
 
 namespace Alaidi\WireContent;
 
+use Alaidi\WireContent\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Alaidi\WireContent\Commands\InstallCommand;
 
 class WireContentServiceProvider extends PackageServiceProvider
 {

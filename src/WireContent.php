@@ -2,7 +2,8 @@
 
 namespace Alaidi\WireContent;
 
-class WireContent {
+class WireContent
+{
     protected static function getFacadeAccessor(): string
     {
         return WireContent::class;
